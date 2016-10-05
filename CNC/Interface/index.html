@@ -2,6 +2,12 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Sascha Be">
+    <meta name="description" content="Dies ist eine Indexseite">
+     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="./design/index.css"/>
+    <link rel="stylesheet" media="print" href="./design/print.css"/>
+
     <title>CNC Interface</title>
 </head>
 <body>
@@ -9,15 +15,31 @@
       <h1>Navigationsmenü</h1>
     </header>
       <menu>
-        <div contextmenu="menue">
-          <menu type="context" id="menue">
-              <menuitem label="Refresh">Jener Context</menuitem>
-
-          <li tabindex="4" ><a accesskey="q" href="http://www.google.de">Punkt1</a></li>
-          <li tabindex="3" accesskey="l">Punkt2</li>
-          <li tabindex="2" contenteditable="true">Punkt3</li>
-          <li tabindex="1">Punkt4</li>
-        </div>
+        <article>
+          <ol>
+            <li tabindex="4" ><a accesskey="q" href="http://www.google.de">Punkt1</a></li>
+            <li tabindex="3" accesskey="l"><strong>Punkt2</strong></li>
+            <li tabindex="2" contenteditable="true">Punkt3</li>
+            <li tabindex="1">Punkt4</li>
+          </ol>
+        </article>
       </menu>
+<br>
+<br>
+      <h2>Jetzt kommt eine Tabelle</h2>
+      <br>
+      <table>
+          <thead>
+              <tr>
+                  <th>Daten</tr>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Vorname</td>
+                  <td>Name</td>
+                  <td>Studiengang</td>
+                  <td>Matrikelnummer</td>
+              </tr>
 </body>
 </html>
