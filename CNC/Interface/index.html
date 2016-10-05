@@ -9,8 +9,15 @@
       <h1>Navigationsmenü</h1>
     </header>
       <menu>
-          <li>Punkt1</li>
-          <li>Punkt2</li>
+        <div contextmenu="menue">
+          <menu type="context" id="menue">
+              <menuitem label="Refresh">Jener Context</menuitem>
+
+          <li tabindex="4" ><a accesskey="q" href="http://www.google.de">Punkt1</a></li>
+          <li tabindex="3" accesskey="l">Punkt2</li>
+          <li tabindex="2" contenteditable="true">Punkt3</li>
+          <li tabindex="1">Punkt4</li>
+        </div>
       </menu>
 </body>
 </html>
