@@ -1,3 +1,29 @@
-<!DOCTYPE html>
-<head>
-  
+body {
+  background: #E6E6E6;
+
+}
+
+
+menu {
+  text-align: center;
+  color: red;
+}
+
+h1 {
+  font-family: "Comic Sans MS";
+  text-align: center;
+  border-style: dashed;
+  border-color: #EBEBEB;
+  text-decoration-color: red;
+  text-decoration: underline;
+  letter-spacing: 6px;
+}
+
+thead{
+  font-size: 22px;
+  text-decoration: underline;
+  font-weight: bold;
+
+
+
+}

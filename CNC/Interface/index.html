@@ -1,63 +1,83 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Sascha Be">
     <meta name="description" content="Dies ist eine Indexseite">
-     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="./design/index.css"/>
-    <link rel="stylesheet" media="print" href="./design/print.css"/>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="./design/index.css" />
+    <link rel="stylesheet" media="print" href="./design/print.css" />
 
     <title>CNC Interface</title>
 </head>
+
 <body>
     <header>
-      <h1>Navigationsmenü</h1>
+        <h1>Navigationsmenü</h1>
     </header>
-      <menu>
+    <menu>
 
-          <ol>
-            <li tabindex="4" ><a accesskey="q" href="http://google.com">Punkt1</a></li>
-            <li tabindex="3" accesskey="l"><strong>Punkt2</strong></li>
-            <li tabindex="2" contenteditable="false"><a href="#status">Punkt3</a></li>
-            <li tabindex="1"><a href="#tasks">Punkt4</a></li>
-          </ol>
+        <ol>
+            <ul tabindex="1"><a accesskey="q" href="#status-overview">Statustabelle</a></ul>
+            <ul tabindex="2"><a accesskey="w" href="#tasks">Tasks</ul>
+            <ul tabindex="3" contenteditable="false"><a href="#status">Status</a></ul>
+            <ul tabindex="4"><a href="#status">Hier ist noch nichts</a> </ul>
 
-      </menu>
-<br>
-<br>
-<main>
-    <article>
-      <h2>Jetzt kommt eine Tabelle</h2>
-    </article>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </menu>
+    <br>
+    <br>
 
-      <section id="status">
-      <table>
-          <thead>
-              <tr>
-                  <th>Daten</tr>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-                  <td>Vorname</td>
-                  <td>Name</td>
-                  <td>Studiengang</td>
-                  <td>Matrikelnummer</td>
-              </tr>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <main>
+        <article>
+            <h2>Jetzt kommt eine Tabelle</h2>
+        </article>
+        <table id="status-overview">
+            <thead>
+                <tr>
+                    <td>Vorname</td>
+                    <td>Name</td>
+                    <td>Studiengang</td>
+                    <td>Matrikelnummer</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+
+                </tr>
             </tbody>
-          </table>
-      </section>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <section id="tasks">
-        asdasdsad
-      </section>
-</main>
+        </table>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+        <section id="tasks">
+            <article>
+                <h2>Hier sind die Tasks</h2>
+            </article>
+            <i> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</i>
+        </section>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <section id="status">
+          <h2>leer</h2>
+        </section>
+
+    </main>
+    
 </body>
+
 </html>
