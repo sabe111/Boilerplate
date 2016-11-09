@@ -1,30 +1,111 @@
 body {
-  background: #E6E6E6;
-
+	margin: 0px;
+	padding: 0px;
 }
-
 
 menu {
-  font-size: 18px;
-  text-align: center;
-  color: red;
+	display: block;
+	position: fixed;
+	top: 0px;
+	right: auto;
+	bottom: 0px;
+	left: 0px;
+	margin: 0px;
+	padding: 16px;
+	width: 20%;
+	color: #ffffff;
+	background: #222222;
 }
 
-h1 {
-  font-family: "Comic Sans MS";
-  text-align: center;
-  border-style: dashed;
-  border-color: #EBEBEB;
-  text-decoration-color: red;
-  text-decoration: underline;
-  letter-spacing: 6px;
+header {
+	display: block;
+	position: fixed;
+	color: #ffffff;
+	background: #222222;
+	top: 0px;
+	right: 0px;
+	bottom: auto;
+	left: 0;
+	height: 64px;
+	z-index: 2;
 }
 
-thead{
-  font-size: 22px;
-  text-decoration: underline;
-  font-weight: bold;
+header h3 {
+	font: bold 32px/64px 'Ubuntu Mono';
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+main {
+	display: block;
+	position: absolute;
+	top: 64px;
+	right: 0px;
+	bottom: 0px;
+	left: calc(20% + 32px);
+	color: #222222;
+	background: #ffffff;
+	font-size: 24px;
+	/* OLD overflow */
+	/* overflow: auto; */
+	overflow: hidden;
+	z-index: 1;
+}
+
+/*
+ * MAIN
+ */
+
+main > section {
+	display: block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 100%;
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+main > section {
+	transform: translate(100%, 0%);
+	transition: transform 300ms ease-out;
+}
+
+main > section:target {
+	left:0%;
+	transform: translate(100%, 0%);
+	transition: transform 300ms ease-out;
+}
 
 
 
+/*
+ * MENU
+ */
+ menu {
+	 top : 64px;
+ }
+
+menu li {
+	display: block;
+	list-style: none;
+	font: bold 24px/48px 'Ubuntu Mono';
+	text-align: right;
+}
+
+menu a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+menu a:hover {
+	color: #ff0000;
+}
+
+menu a:active {
+	color: #b30000;
+	background-color : #ffffff
 }
