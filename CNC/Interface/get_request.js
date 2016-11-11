@@ -82,13 +82,13 @@ var fillApiStatus = function() {
     fetch('http://botnet.artificial.engineering:80/api/Status').then((response) => {
         return response.json();
     }).then(function(json) {
-        console.log(json);
+    //    console.log(json);
         var element = document.querySelector('#status tbody');
         element.innerHTML = json.map((val, index) => {
 
-            let tdData = '<button type="button" id=' + (val.workload === 0 ? "inaktiv" : "aktiv") +" onclick = 'startStop(this , "+val.id+")'" +'>' + (val.workload === 0 ? "Start" : "Stop") + '</button>'
+            let button = '<button type="button" id=' + (val.workload === 0 ? "inaktiv" : "aktiv") +" onclick = 'startStop(this , "+val.id+")'" +'>' + (val.workload === 0 ? "Start" : "Stop") + '</button>'
 
-            return '<tr><td>' + Object.values(val).join('</td><td>') + '</td>' + '<td>' + tdData + '</td></tr>';
+            return '<tr><td>' + Object.values(val).join('</td><td>') + '</td>' + '<td>' + button + '</td></tr>';
         }).join('\n');
 
     });
@@ -96,6 +96,7 @@ var fillApiStatus = function() {
 }
 
 var startStop = (function(element, id) {
+  console.log(element.id);
  if(element.id=='aktiv'){
    updateStatus(id , 'false');
  } else{
@@ -104,15 +105,20 @@ var startStop = (function(element, id) {
 
 });
 
+
 var updateStatus = (function(id, status){
+//  console.log(id);
+//  console.log(status);
   var data = {id : id, status : status};
   var xhrPost = new XMLHttpRequest();
-  xhrPost.open('POST' , 'http://botnet.artificial.engineering/api/Status');
-  xhrPost.setRequestHeader('Content-Type', 'application/json');
+  xhrPost.open('POST' , 'http://botnet.artificial.engineering/api/Status', true);
+  xhrPost.responseType = 'json';
+  xhrPost.setRequestHeader('Content-Type', 'application/json ; charset=UTF-8');
+  console.log(JSON.stringify(data));
   xhrPost.send(JSON.stringify(data));
-  fillApiStatus();
-
-
+    fillApiStatus();
 });
+
+
 
 fillApiStatus();
